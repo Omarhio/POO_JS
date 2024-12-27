@@ -1,22 +1,20 @@
 class Voiture {
 
-    constructor(marque, modele, annee, couleur) {
-        this._marque = marque;
-        this._modele = modele;
-        this._annee = annee;
-        this._couleur = couleur;
-    }
-
-    get couleurs() {
-        return this._couleur;
-    }
-
-    set couleurs(nouvelleCouleur) {
-        this._couleur = nouvelleCouleur;
+    constructor(marque, modele, annee) {
+        this.marque = marque;
+        this.modele = modele;
+        this.annee = annee;
     }
 
 }
+class Vehicule extends Voiture {
+    constructor(marque, modele, annee, couleur) {
+        super(marque, modele, annee)
+        this.couleur = couleur;
 
-const voiture = new Voiture("Toyota", "Corolla", 2024, "Vert");
+    }
+}
 
-console.log(voiture.couleurs);
+const voiture = new Vehicule("Toyota", "Corolla", 2024, "Vert");
+
+console.log(voiture.couleur);
