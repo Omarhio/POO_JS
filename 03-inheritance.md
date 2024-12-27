@@ -1,3 +1,14 @@
+## Exercice 3 : Héritage
+
+### Objectif : Apprendre à créer des relations hiérarchiques entre les classes.
+
+1. Créer une classe Vehicule avec les attributs marque, modele et annee.
+
+2. Faire en sorte que Voiture hérite de Vehicule et possède l'attribut couleur (absent de la classe Vehicule).
+
+### Solution
+
+```js
 class Voiture {
 
     constructor(marque, modele, annee) {
@@ -18,3 +29,4 @@ class Vehicule extends Voiture {
 const voiture = new Vehicule("Toyota", "Corolla", 2024, "Vert");
 
 console.log(voiture.couleur);
+```
